@@ -1,0 +1,7 @@
+{
+  "name": "MyTicket",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
