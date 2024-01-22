@@ -24,3 +24,31 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Josefin+Sans:ital,wght@1,200&display=swap');
+
+
+ion-menu::part(backdrop) {
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+  
+    box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  }
+
+  .titulo{
+    font-family: 'EB Garamond', serif;
+    font-size: 20;
+    color:rgb(174, 6, 240) ;
+
+  }
+  .normal{
+    font-family: 'EB Garamond', serif;
+    font-family: 'Josefin Sans', sans-serif
+    font-size 15;
+    color:rgb(0, 0, 0) ;
+    
+    
+
+  }

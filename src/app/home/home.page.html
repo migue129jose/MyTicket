@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="titulo">
+      MyTicket
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">MyTicket</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -21,12 +21,27 @@
 
 
 <swiper-slide>
-  <h1>Titulo</h1>
-  <p>Contenido</p>
-  <img src="https://wwwhatsnew.com/wp-content/uploads/2022/09/y-heatre_Dopera_Spatial.jpg">
-  <ion-avatar>
-    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-  </ion-avatar>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+  <h1 class="titulo">JUNIOR VS BUCARAMANGA</h1>
+  <p class="normal">24/01/2024</p>
+  <img src="https://tuboleta.com/imagenes/65aacf71c0c41.webp">
+</div>
+<div class="col-6">
+  <h1 class="normal">
+    Lugar: Estadio Metropolitano de Fútbol Roberto Meléndez <br>
+    Ciudad: Barranquilla <br>
+    Fecha: 2024-01-21 <br>
+    Hora: 6:10PM <br>
+    Dirección: Av. Circunvalar con Cll Murillo
+   .</h1>
+  <button type="button" class="btn btn-primary">COMPRAR BOLETA</button>
+</div>
+</div>
+ 
+</div>
+  
 </swiper-slide>
 <swiper-slide>Slide 2</swiper-slide>
 <swiper-slide>Slide 3</swiper-slide>
@@ -38,8 +53,6 @@
   </swiper-container>
 
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+  
 </ion-content>
