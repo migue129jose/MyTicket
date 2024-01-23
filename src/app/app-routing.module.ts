@@ -8,12 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tab',
     pathMatch: 'full'
   },
   {
     path: 'intro',
     loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
+  },
+  {
+    path: 'tab',
+    loadChildren: () => import('./tab/tab.module').then( m => m.TabPageModule)
+  },
+  {
+    path: 'destacado',
+    loadChildren: () => import('./destacado/destacado.module').then( m => m.DestacadoPageModule)
   },
 ];
 

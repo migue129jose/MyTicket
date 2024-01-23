@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. 
+
+    </ion-content>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home"></ion-icon>
+          INICIO
+        </ion-tab-button>
+        <ion-tab-button tab="intro">
+          <ion-icon name="glasses"></ion-icon>
+          EVENTOS
+        </ion-tab-button>
+        <ion-tab-button tab="destacado">
+          <ion-icon name="albums"></ion-icon>
+           DESTACADOS
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </div>
+</ion-app>
