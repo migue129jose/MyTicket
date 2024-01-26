@@ -25,6 +25,9 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Josefin+Sans:ital,wght@1,200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 ion-menu::part(backdrop) {
@@ -48,6 +51,13 @@ ion-menu::part(backdrop) {
     font-family: 'Josefin Sans', sans-serif
     font-size 15;
     color:rgb(0, 0, 0) ;
+    
+    
+  .centro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     
     
 
