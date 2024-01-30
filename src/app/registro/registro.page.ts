@@ -5,6 +5,7 @@ import{
   Validators,
   FormBuilder
 } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -14,24 +15,42 @@ import{
 export class RegistroPage implements OnInit {
   formularioRegistro!: FormGroup;
 
-  constructor(public fb: FormBuilder) { 
+  constructor(public fb: FormBuilder,
+    public alertController: AlertController) { 
      this.formularioRegistro = this.fb.group({
       'usuario' : new FormControl("", Validators.required),
       'contraseña' : new FormControl("", Validators.required),
       'confirmacioncontraseña' : new FormControl("", Validators.required),
-      'nombre' : new FormControl("", Validators.required),
-      'apellido' : new FormControl("", Validators.required),
-      'correo' : new FormControl("", Validators.required),
+      
 
      })
 
   }
 
-  guardar() {
-    console.log('Guardar método ejecutado');
-  }
-
+  
   ngOnInit() {
   }
+ async guardar() {
+    var f=this.formularioRegistro.value;
+    
+
+    if(this.formularioRegistro.invalid){
+      const alert = await this.alertController.create({
+        header: 'DATOS IMCOMPLETOS',
+        message: 'Complete los campos requeridos',
+        buttons: ['Aceptar']
+      });
+      await alert.present();
+      return;
+    }
+    var usuario = {
+      usuario: f.usuario,
+      contraseña: f.contraseña
+    }
+
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+
+  }
+
 
 }

@@ -14,6 +14,7 @@ import{
 export class LoginPage implements OnInit {
 
   formularioLogin!: FormGroup;
+  alertController: any;
 
   constructor(public fb: FormBuilder) {
 
@@ -28,5 +29,25 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  async ingresar(){
 
+    var usuarioString = localStorage.getItem('usuario');
+var usuario: any; 
+
+if (usuarioString !== null) {
+    usuario = JSON.parse(usuarioString);
+} else {
+    
+  const alert = await this.alertController.create({
+    header: 'Datos incorrectos',
+    message: 'Los datos que ingresaste son incorrectos.',
+    buttons: ['Aceptar']
+  });
+
+  await alert.present();
+}
+
+
+
+  }
 }
