@@ -18,22 +18,25 @@
       <ion-card-title>Login</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form [formGroup]="formularioLogin">
+      <form [formGroup]="formularioLogin" (ngSubmit)="login(formularioLogin.value)" >
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
           <ion-input formControlName="Usuario"></ion-input>
         </ion-item>
+       
   
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input formControlName="Contraseña" type="password"></ion-input>
         </ion-item>
+        
+        <br>
+        <ion-button type="submit" [disabled]="!formularioLogin.valid">Ingresar</ion-button>
   
+        <ion-button [routerLink]="['/tab']">Atras</ion-button>
       </form>
       <br>
-      <ion-button (click)="ingresar()">Ingresar</ion-button>
-  
-      <ion-button [routerLink]="['/tab']">Atras</ion-button>
+      
   
     </ion-card-content>
   

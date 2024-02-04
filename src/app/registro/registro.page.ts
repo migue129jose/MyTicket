@@ -15,10 +15,19 @@ import { AlertController } from '@ionic/angular';
 export class RegistroPage implements OnInit {
   formularioRegistro!: FormGroup;
 
+  validation_messages={
+    usuario:[
+      {type: "required", message:"El usuario es obligatorio"},
+      {type: "pattern", message:"Colocar un correo valido"}
+    ]
+    
+  }
+  
+
   constructor(public fb: FormBuilder,
     public alertController: AlertController) { 
      this.formularioRegistro = this.fb.group({
-      'usuario' : new FormControl("", Validators.required),
+      'usuario' : new FormControl("", Validators.compose ([Validators.required,Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])),
       'contraseña' : new FormControl("", Validators.required),
       'confirmacioncontraseña' : new FormControl("", Validators.required),
       
