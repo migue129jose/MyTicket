@@ -7,7 +7,7 @@ import { EventsService } from '../services/events.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  event_list = []
+  event_list: any;
 
   constructor(private events: EventsService) {}
   ionViewDidEnter(){

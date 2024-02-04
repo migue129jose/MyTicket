@@ -13,11 +13,11 @@
 
  
 
-  <ion-card>
+  <ion-card >
     <ion-card-header>
       <ion-card-title>Login</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content class="ion-padding">
       <form [formGroup]="formularioLogin" (ngSubmit)="login(formularioLogin.value)" >
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
@@ -31,7 +31,9 @@
         </ion-item>
         
         <br>
-        <ion-button type="submit" [disabled]="!formularioLogin.valid">Ingresar</ion-button>
+        <ion-button id="open-toast" type="submit" [disabled]="!formularioLogin.valid">Ingresar</ion-button>
+        
+       <ion-toast trigger="open-toast" message="Sesion iniciada exitosamente" [duration]="5000"></ion-toast>
   
         <ion-button [routerLink]="['/tab']">Atras</ion-button>
       </form>
