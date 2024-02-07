@@ -20,4 +20,15 @@ export class EventsService {
   getLocalEvents(){
     return dataEvents;
   }
+  
+  getCategorias() {
+    return fetch(`${this.urlServer}/categories`).then(
+      response => response.json());
+  }
+
+  getCategoryId(id: number) {
+    return fetch(`${this.urlServer}/categories/${id}`).then(
+      response => response.json());
+      
+  }
 }

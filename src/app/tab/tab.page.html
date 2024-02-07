@@ -7,8 +7,10 @@
     </ion-header>
     <ion-content class="ion-padding">
 
-      <ion-button [routerLink]="['/tab/login']">Inicio de sesion</ion-button> <br>
-      <ion-button [routerLink]="['/tab/registro']">Registrarse</ion-button>
+       <ion-button [routerLink]="['/tab/login']">Inicio de sesion</ion-button> <br>
+      <ion-button [routerLink]="['/tab/registro']">Registrarse</ion-button> <br>
+      <ion-button (click)="logout()">Cerrar Sesion</ion-button>
+
 
     </ion-content>
   </ion-menu>

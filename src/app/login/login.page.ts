@@ -20,10 +20,19 @@ export class LoginPage implements OnInit {
   formularioLogin!: FormGroup;
   alertController: any;
   validation_messages={
-    usuario:[
+    Usuario:[
       {type: "required", message:"El usuario es obligatorio"},
       {type: "pattern", message:"Colocar un correo valido"}
+    ],
+    Contrasena: [
+      {type: "required",  message: "Campo requerido"},
+      {type: "pattern",   message: "Ingrese una contraseña valida"},
+      {type: "minLength", message: "Debe tener minimo 4 caracteres"},
+      
     ]
+    
+
+      
     
     
   }
@@ -32,7 +41,8 @@ export class LoginPage implements OnInit {
 
     this.formularioLogin = this.fb.group({
       'Usuario': new FormControl("", Validators.compose ([Validators.required,Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$")])),
-      'Contraseña': new FormControl("", Validators.required)  
+      'Contrasena': new FormControl("",  Validators.compose([Validators.required,Validators.minLength(4), Validators.maxLength(10),Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]*$/)
+      ]))  
       
     })
 
@@ -41,6 +51,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  
   
   login(login_data: any){
     console.log(login_data);
