@@ -10,7 +10,7 @@ export class AuthService {
 
   loginUser(credential: any){
     return new Promise((accept, rejec) => {
-      if(credential.Usuario == 'migue.jose129@gmail.com' && credential.Contraseña == 'Miguel1234'){
+      if(credential.Usuario == 'migue.jose129@gmail.com' && credential.Contrasena == 'Miguel1234'){
         accept('Login Correcto');
       }else{
         rejec('Login incorrecto')
